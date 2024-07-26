@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CTFA"
+version = "1.0.0"
+authors = [
+    { name="Qi Zhang", email="q-zhang20@mails.tsinghua.edu.cn" },
+    { name="Zuoqiang Shi", email="zq-shi@mail.tsinghua.edu.cn" },
+    { name="Mingxu Hu", email="humingxu@smart.org.cn" },
+]
+description = "CTFA: Cryo-EM CTF (Contrast Transfer Function) parameter estimation software by TFA (Time-Frequency Analysis)"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.7"
+dependencies = [
+    "numpy>=1.18",
+    "mrcfile>=1.4.3",
+    "cupy>=10"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Image Processing"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mxhulab/ctfa"
+
+[project.scripts]
+"ctfa" = "CTFA.ctfa:main"
